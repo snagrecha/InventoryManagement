@@ -28,7 +28,7 @@ namespace InventoryManagement
             comboBox1.DisplayMember = "Name";
             comboBox1.ValueMember = "Prefix";
 
-            comboBox1.SelectedIndex = 1;
+            comboBox1.SelectedIndex = 0;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

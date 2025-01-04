@@ -4,6 +4,7 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Data;
 using System.Diagnostics;
+using System.Configuration;
 
 namespace InventoryManagement
 {
@@ -12,13 +13,13 @@ namespace InventoryManagement
         //public static String hostServerName = Home.hostServerName;
         //public static String hostDBName = Home.hostDBName;
         
-        public static String hostServerName = "JUNIOR";
-        public static String hostDBName = "InventoryManagement";
+        public static String hostServerName = ConfigurationManager.AppSettings["hostServerName"];
+        public static String hostDBName = ConfigurationManager.AppSettings["hostDBName"];
 
         public static SqlConnection ConnectToDB(String serverName, String dbname)
         {
             SqlConnection con = null;
-            String ConnectionString = "Server=" + serverName + ";Initial Catalog=" + dbname + ";UID=sn;PWD=sn;Pooling=False";
+            String ConnectionString = "Server=" + serverName + ";Initial Catalog=" + dbname + ";UID=sa;PWD=aa;Pooling=False";
             //String ConnectionString = ConfigurationManager.ConnectionStrings["StockHP"].ConnectionString;
             //String ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["Stock"].ToString();
 

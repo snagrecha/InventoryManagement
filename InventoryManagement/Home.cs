@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InventoryManagement.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -89,6 +90,8 @@ namespace InventoryManagement
             PopulateStockOverviewDataGrid();
             InitializeStockOverviewDataGrid();
             barcodeTextBox.Focus();
+
+            this.Icon = Resources.inventorymanagement;
         }
 
         private void addViewRemarksButton_Click(object sender, EventArgs e)

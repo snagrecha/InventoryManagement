@@ -98,7 +98,8 @@ namespace InventoryManagement
 
             foreach(DataGridViewRow row in barcodePrintDataGrid.Rows)
             {
-                Boolean print = (Boolean)row.Cells["Print"].Value;
+                Boolean print = false;
+                if(!(row.Cells["Print"].Value is DBNull)) print = Convert.ToBoolean(row.Cells["Print"].Value);
 
                 //COPY ALL ROWS WITH PRINT SET TO TRUE TO A NEW DataTable FOR PRINTING
                 if(print)
